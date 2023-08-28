@@ -110,4 +110,11 @@ int main()
     //         cout << i << endl;
     //     }
     // }
+
+    // bonus question
+    int n = 10;
+    if (cout << n)
+    {
+        cout << "love";
+    }
 }
