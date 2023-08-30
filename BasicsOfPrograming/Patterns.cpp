@@ -89,7 +89,7 @@ int main()
         cout << endl;
     }
 
-    // numeric hald pyramid
+    // numeric half pyramid
     int m;
     cin >> m;
     for (int i = 0; i < m; i++)
@@ -109,6 +109,75 @@ int main()
         for (int col = 0; col < n - row; col++)
         {
             cout << col + 1;
+        }
+        cout << endl;
+    }
+    // hollow half inverted pyramid
+    for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            if (i == 0 || j == 0 || j == 6 - i - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    // full pyramid
+    int xy;
+    cin >> xy;
+    for (int row = 0; row < xy; row++)
+    {
+        int k = 0;
+        for (int col = 0; col < ((2 * xy) - 1); col++)
+        {
+            if (col < xy - row - 1)
+            {
+                cout << " ";
+            }
+            else if (k < 2 * row + 1)
+            {
+                cout << "*";
+                k++;
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    // hollow pyramid
+    int xyz;
+    cin >> xyz;
+    for (int row = 0; row < xyz; row++)
+    {
+        int k = 0;
+        for (int col = 0; col < ((2 * xyz) - 1); col++)
+        {
+            if (col < xy - row - 1)
+            {
+                cout << " ";
+            }
+            else if (k < 2 * row + 1)
+            {
+                if (k == 0 || k == 2 * row || row == xyz - 1)
+                    cout << "*";
+                else
+                {
+                    cout << " ";
+                }
+                k++;
+            }
+            else
+            {
+                cout << " ";
+            }
         }
         cout << endl;
     }
