@@ -181,4 +181,123 @@ int main()
         }
         cout << endl;
     }
+
+    // full pyramid
+    int y;
+    cin >> y;
+    for (int row = 0; row < y; row++)
+    {
+        for (int col = 0; col < y - row - 1; col++)
+        {
+            // space
+            cout << " ";
+        }
+        // star
+        for (int col = 0; col < row + 1; col++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // inverted full pyramid
+    int z;
+    cin >> z;
+    for (int row = 0; row < z; row++)
+    {
+        for (int col = 0; col < row; col++)
+        {
+            // space
+            cout << " ";
+        }
+        // star
+        for (int col = 0; col < z - row; col++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // diamond
+    int num;
+    cin >> num;
+    int k = num / 2;
+    for (int row = 0; row < k; row++)
+    {
+        for (int col = 0; col < k - row - 1; col++)
+        {
+            // space
+            cout << " ";
+        }
+        // star
+        for (int col = 0; col < row + 1; col++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    for (int row = 0; row < k; row++)
+    {
+        for (int col = 0; col < row; col++)
+        {
+            // space
+            cout << " ";
+        }
+        // star
+        for (int col = 0; col < k - row; col++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    // hollow full pyramid
+    int u;
+    cin >> u;
+    for (int row = 0; row < u; row++)
+    {
+        for (int col = 0; col < u - row - 1; col++)
+        {
+            // space
+            cout << " ";
+        }
+        // star
+        for (int col = 0; col < row + 1; col++)
+        {
+            if (col == 0 || col == row + 1 - 1)
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+
+    // hollow inverted
+
+    // hollow daimond
+
+    // flipped hald column;
+    int num = 8;
+    int o = 4;
+    for (int row = 0; row < o; row++)
+    {
+        cout << "*";
+    } // INVERTED PYRAMID
+    for (int col = 0; col < o - row; col++)
+    {
+        cout << "*";
+    }
+    for (int col = 0; col < 2 * row + 1; col++)
+    {
+        cout << " ";
+    }
+    for (int col = 0; col < o - row; col++)
+    {
+        cout << "*";
+    }
+    cout << endl;
 }
