@@ -352,5 +352,147 @@ int main()
     //     cout << endl;
     // }
 
-    //******************numeric pyramid
+    //******************character pyramid
+    // for (int row = 0; row < n; row++)
+    // {
+    //     char ch;
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         int number = col + 1;
+    //         ch = number + 'A' - 1;
+    //         cout << ch;
+    //     }
+
+    //     // jab tak a tak nahi poch jate tab tak
+    //     for (char alphabet = ch; alphabet > 'A';)
+    //     {
+    //         alphabet = alphabet - 1;
+    //         cout << alphabet;
+    //     }
+    //     cout << endl;
+    // }
+    // for (int row = 0; row < n; row++)
+    // {
+    //     char ch;
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         int number = col + 1;
+    //         ch = number + 'A' - 1;
+    //         cout << ch;
+    //     }
+    //     //
+    //     for (char alphabet = ch; alphabet > 'A';)
+    //     {
+    //         alphabet = alphabet - 1;
+    //         cout << alphabet;
+    //     }
+    //     cout << endl;
+    // }
+
+    // numric hollow inverted pyramid
+    // for (int row = 1; row <= n; row++)
+    // {
+    //     // inner loop
+    //     for (int col = row; col <= n; col++)
+    //     {
+    //         if (row == 1 || col == row || col == n)
+    //         {
+    //             cout << col;
+    //         }
+    //         else
+    //         {
+    //             cout << " ";
+    //         }
+    //     }
+    //     cout << endl;
+    // }
+
+    // inverted numric pyramid
+    //  for (int row = 1; row <= n; row++)
+    //  {
+    //      // inner loop
+    //      for (int col = 1; col <= row; col++)
+    //      {
+    //          if (col == 1 || col == row || row == n)
+    //          {
+    //              cout << col << " ";
+    //          }
+    //          else
+    //          {
+    //              cout << "  ";
+    //          }
+    //      }
+    //      cout << endl;
+    //  }
+    //  for (int row = 1; row <= 5; row++)
+    //  {
+    //      for (int col = 1; col <= 5 - row + 1; col++)
+    //      {
+    //          if (row == 1)
+    //          {
+    //              cout << " " << col << " ";
+    //          }
+    //          else if (col == 1)
+    //          {
+    //              cout << " " << row << " ";
+    //          }
+    //          else if (col == 5 - row + 1)
+    //          {
+    //              cout << " 5 ";
+    //          }
+    //          else
+    //          {
+    //              cout << "   ";
+    //          }
+    //      }
+    //      cout << endl;
+    //  }
+
+    // **********************************numric palindrome equilateral pyramid
+    // for (int row = 1; row <= n; row++)
+    // {
+    //     // inner loop
+    //     for (int col = 1; col <= n - row; col++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     // assending
+    //     for (int col = 1; col <= row; col++)
+    //     {
+    //         cout << col;
+    //     }
+    //     // descending
+    //     for (int col = row - 1; col >= 1; col--)
+    //     {
+    //         cout << col;
+    //     }
+    //     cout << endl;
+    // }
+
+    //***************** fancy pattern 3
+    for (int row = 0; row < n; row++)
+    {
+        // inner loop 1
+        for (int col = 0; col < (2 * n - row - 2); col++)
+        {
+            cout << "*";
+        }
+        // inner loop 2
+        for (int col = 0; col < row + 1; col++)
+        {
+            cout << row + 1 << "*";
+        }
+        // inner loop 2(ii)
+        for (int col = row - 1; col > 1; col--)
+        {
+            cout << row + 1;
+        }
+
+        // inner loop3
+        for (int col = 0; col < (2 * n - row - 2); col++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
