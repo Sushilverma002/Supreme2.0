@@ -1,3 +1,1 @@
-cout << (++a);
-    cout << (a++);
-    cout << (--a);
+    // sumOfN(10);

@@ -470,26 +470,101 @@ int main()
     // }
 
     //***************** fancy pattern 3
+    // for (int row = 0; row < n; row++)
+    // {
+    //     // inner loop 1
+    //     for (int col = 0; col < (2 * n - row - 2); col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     // inner loop 2
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         cout << row + 1 << "*";
+    //     }
+    //     // inner loop3
+    //     for (int col = 0; col < (2 * n - row - 2); col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // solid half daimond
+    /**
+     **
+     ***
+     ****
+     ***
+     **
+     **/
+    // for (int row = 0; row < n; row++)
+    // {
+    //     // inner loop
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+    // for (int row = 0; row < n; row++)
+    // {
+    //     for (int col = 0; col < n - row - 1; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // floy'd triangle
+    /*1
+    23
+    456
+    78910
+    1112131415
+    161718192021*/
+    // int count = 1;
+    // for (int row = 0; row < n; row++)
+    // {
+    //     // inner loop
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         cout << count;
+    //         count++;
+    //     }
+    //     cout << endl;
+    // }
+
+    // butterfly pattern
     for (int row = 0; row < n; row++)
     {
         // inner loop 1
-        for (int col = 0; col < (2 * n - row - 2); col++)
+        for (int col = 0; col < row + 1; col++)
         {
             cout << "*";
         }
-        // inner loop 2
+        for (int col = 0; col < 2 * n - 2 * row - 2; col++)
+        {
+            cout << " ";
+        }
         for (int col = 0; col < row + 1; col++)
         {
-            cout << row + 1 << "*";
+            cout << "*";
         }
-        // inner loop 2(ii)
-        for (int col = row - 1; col > 1; col--)
+        cout << endl;
+    }
+    for (int row = 0; row < n; row++)
+    {
+        // inner loop 1
+        for (int col = 0; col < n - row; col++)
         {
-            cout << row + 1;
+            cout << "*";
         }
-
-        // inner loop3
-        for (int col = 0; col < (2 * n - row - 2); col++)
+        for (int col = 0; col < 2 * n - 2 * row - 1; col++)
+        {
+            cout << " ";
+        }
+        for (int col = 0; col < n - row; col++)
         {
             cout << "*";
         }
