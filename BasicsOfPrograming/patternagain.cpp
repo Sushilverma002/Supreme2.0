@@ -553,21 +553,31 @@ int main()
         }
         cout << endl;
     }
-    for (int row = 0; row < n; row++)
+    // for (int row = 0; row < n; row++)
+    // {
+    //     // inner loop 1
+    //     for (int col = 0; col < n - row; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int col = 0; col < 2 * n - 2 * row - 2; col++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int col = 0; col < n - row; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+    for (int i = n; i >= 1; i--)
     {
-        // inner loop 1
-        for (int col = 0; col < n - row; col++)
-        {
+        for (int j = 1; j <= i; j++)
             cout << "*";
-        }
-        for (int col = 0; col < 2 * n - 2 * row - 1; col++)
-        {
+        for (int j = 1; j <= 2 * (n - i); j++)
             cout << " ";
-        }
-        for (int col = 0; col < n - row; col++)
-        {
+        for (int j = 1; j <= i; j++)
             cout << "*";
-        }
-        cout << endl;
+        cout << "\n";
     }
 }

@@ -1,2 +1,2 @@
-int binary = DecimaToBinayMethodQ(n);
-    // cout << binary << endl;
+int n;
+    // cin >> n;

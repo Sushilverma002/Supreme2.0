@@ -182,6 +182,101 @@ int DecimaToBinayMethod2(int n)
     return ans;
 }
 
+// binary to decimal
+int binaryToDecimal(int n)
+{
+    int ans = 0;
+    int i = 0;
+    while (n)
+    {
+        int bit = n % 10;
+        ans = bit * pow(2, i++) + ans;
+        n = n / 10;
+    }
+    return ans;
+}
+
+// degree celcius into kelvin.
+void degreeTokel(int degree)
+{
+    int kelvin = degree + 273;
+    cout << "the conversion of degree to fhern. is:" << kelvin << "F" << endl;
+}
+
+// FHERNHI into kelvin
+void kelToDeg(int kelvin)
+{
+    int deg = kelvin - 273;
+    cout << "the degree celcius of fheri is :" << deg << "C" << endl;
+}
+
+//  degree into Fahrenheit
+void degreetoFrahenheit(int d)
+{
+    double deg = ((d * 1.80) + 32);
+    cout << "the conversion is:" << deg << "F" << endl;
+}
+void franhenheitToDegree(int f)
+{
+    double deg = ((f - 32) * 5 / 9);
+    cout << "the conversion is:" << deg << "C" << endl;
+}
+
+// factorial of a no.
+long long int FactorialOfNumber(long long int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+// function for even and odd
+void EvenOdd(int n)
+{
+    if (n % 2 == 0)
+    {
+        cout << "even" << endl;
+    }
+    else
+    {
+        cout << "odd";
+    }
+}
+
+// ODD EVEN WITH BITWISE OPERATOR
+void EvenOddBitwise(int n)
+{
+    if (n & 1 == 0)
+    {
+        cout << "even" << endl;
+    }
+    else
+    {
+        cout << "odd";
+    }
+}
+
+// km into miles
+void kmToMiles(int n)
+{
+    double miles = n / 1.608;
+    cout << "miles will be: " << miles << "Miles";
+}
+
+// count set bit of a no
+void CountSetBit(int n)
+{
+    int count = 0;
+    while (n != 0)
+    {
+        int bit = n % 10;
+        n = n / 10;
+        count++;
+    }
+    cout << count << endl;
+}
 int main()
 {
     // PrintSumOf(5, 5, 5);
@@ -230,11 +325,28 @@ int main()
     // int digi = PrintAllDigit(n);
 
     // decimal to binary
-    int n;
-    cin >> n;
+    // int n;
+    // cin >> n;
     // int binary = DecimaToBinayMethodQ(n);
     // cout << binary << endl;
-    int binary2 = DecimaToBinayMethod2(n);
-    cout << binary2 << endl;
+    // int binary2 = DecimaToBinayMethod2(n);
+    // cout << binary2 << endl;
+    // int decimal = binaryToDecimal(n);
+    // cout << decimal;
+    // degreeToFren(n);
+    // fehreToDg(n);
+    // degreetoFrahenheit(50);
+    // franhenheitToDegree(50);4
+    // int n1;
+    // cin >> n1;
+    // int factori = FactorialOfNumber(n1);
+    // cout << "factorial of a number is:" << factori << endl;
+    int n;
+    cin >> n;
+    // EvenOdd(n);
+    // cout << endl;
+    // EvenOddBitwise(n);
+    // kmToMiles(n);
+    CountSetBit(n);
     return 0;
 }
