@@ -1,1 +1,2 @@
-    // sumOfN(10);
+int binary = DecimaToBinayMethodQ(n);
+    // cout << binary << endl;

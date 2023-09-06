@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
+#define PI 3.14;
 // void printLine()
 // {
 //     for (int i = 0; i < 10; i++)
@@ -117,6 +119,69 @@ void counting1toN(int u)
         cout << i << endl;
     }
 }
+
+//****************Homework*************
+
+// area of circle
+void areaOfCircle(int r)
+{
+    double area = 3.14 * r * r;
+    cout << "area of circle is " << area;
+}
+
+// prime no from i ot n
+bool PrimeNoOnetoN(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+// print digit of the intger;
+int PrintAllDigit(int n)
+{
+    while (n != 0)
+    {
+        int digit = n % 10;
+        n = n / 10;
+        cout << "the digit is:" << digit << endl;
+    }
+}
+
+// decimal to binary method 1
+int DecimaToBinayMethodQ(int n)
+{
+    int i = 0;
+    int ans = 0;
+    while (n > 0)
+    {
+        int bit = n % 2;
+        ans = bit * pow(10, i++) + ans; // this formula will give us binary no that was found after conversion of decimal no;
+        n = n / 2;
+    }
+    return ans;
+}
+
+// method 2 for decimal to binary
+int DecimaToBinayMethod2(int n)
+{
+    // bitwise method
+    int ans = 0;
+    int i = 0;
+    while (n > 0)
+    {
+        int bit = (n & 1);
+        ans = bit * pow(10, i++) + ans; // this formula will give us binary no that was found after conversion of decimal no;
+        n = n >> 1;
+    }
+    return ans;
+}
+
 int main()
 {
     // PrintSumOf(5, 5, 5);
@@ -143,6 +208,33 @@ int main()
     // {
     //     cout << "not a prime no";
     // }
-    counting1toN(10);
+    // counting1toN(10);
+    // areaOfCircle(2);
+
+    // print prime no 1 to n
+    /*
+    int n;
+    cin >> n;
+    for (int i = 2; i <= n; i++)
+    {
+        bool isPrime = PrimeNoOnetoN(i);
+        if (isPrime)
+        {
+            cout << i << " ";
+        }
+    }
+    */
+
+    // int n;
+    // cin >> n;
+    // int digi = PrintAllDigit(n);
+
+    // decimal to binary
+    int n;
+    cin >> n;
+    // int binary = DecimaToBinayMethodQ(n);
+    // cout << binary << endl;
+    int binary2 = DecimaToBinayMethod2(n);
+    cout << binary2 << endl;
     return 0;
 }
