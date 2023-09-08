@@ -408,22 +408,22 @@ int main()
     // }
 
     // inverted numric pyramid
-    //  for (int row = 1; row <= n; row++)
-    //  {
-    //      // inner loop
-    //      for (int col = 1; col <= row; col++)
-    //      {
-    //          if (col == 1 || col == row || row == n)
-    //          {
-    //              cout << col << " ";
-    //          }
-    //          else
-    //          {
-    //              cout << "  ";
-    //          }
-    //      }
-    //      cout << endl;
-    //  }
+    // for (int row = 1; row <= n; row++)
+    // {
+    //     // inner loop
+    //     for (int col = 1; col <= row; col++)
+    //     {
+    //         if (col == 1 || col == row || row == n)
+    //         {
+    //             cout << col << " ";
+    //         }
+    //         else
+    //         {
+    //             cout << "  ";
+    //         }
+    //     }
+    //     cout << endl;
+    // }
     //  for (int row = 1; row <= 5; row++)
     //  {
     //      for (int col = 1; col <= 5 - row + 1; col++)
@@ -536,23 +536,23 @@ int main()
     // }
 
     // butterfly pattern
-    for (int row = 0; row < n; row++)
-    {
-        // inner loop 1
-        for (int col = 0; col < row + 1; col++)
-        {
-            cout << "*";
-        }
-        for (int col = 0; col < 2 * n - 2 * row - 2; col++)
-        {
-            cout << " ";
-        }
-        for (int col = 0; col < row + 1; col++)
-        {
-            cout << "*";
-        }
-        cout << endl;
-    }
+    // for (int row = 0; row < n; row++)
+    // {
+    //     // inner loop 1
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int col = 0; col < 2 * n - 2 * row - 2; col++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int col = 0; col < row + 1; col++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
     // for (int row = 0; row < n; row++)
     // {
     //     // inner loop 1
@@ -570,14 +570,14 @@ int main()
     //     }
     //     cout << endl;
     // }
-    for (int i = n; i >= 1; i--)
-    {
-        for (int j = 1; j <= i; j++)
-            cout << "*";
-        for (int j = 1; j <= 2 * (n - i); j++)
-            cout << " ";
-        for (int j = 1; j <= i; j++)
-            cout << "*";
-        cout << "\n";
-    }
+    // for (int i = n; i >= 1; i--)
+    // {
+    //     for (int j = 1; j <= i; j++)
+    //         cout << "*";
+    //     for (int j = 1; j <= 2 * (n - i); j++)
+    //         cout << " ";
+    //     for (int j = 1; j <= i; j++)
+    //         cout << "*";
+    //     cout << "\n";
+    // }
 }
