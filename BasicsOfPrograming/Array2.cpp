@@ -92,6 +92,24 @@ void CountZeroOneTwoPointer(int arr[], int n)
         }
     }
 }
+
+void printarrayji(int arr[], int n)
+{
+    // array is printed
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+void printdyamicarray(int arr[], int n)
+{
+    cout << "array is printing" << endl;
+    // print an dyamic array
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 int main()
 {
     // int n = 5;
@@ -116,15 +134,38 @@ int main()
     // }
 
     // sort zero and one
-    int n = 10;
-    int arr[] = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
-    // countZeroOne(arr, n);
-    CountZeroOneTwoPointer(arr, 10);
-    // print
+    // int n = 10;
+    // int arr[] = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
+    // // countZeroOne(arr, n);
+    // CountZeroOneTwoPointer(arr, 10);
+    // // print
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+
+    // static memory allocation
+    // int arr[5] = {1, 5, 3, 6, 4};
+    // printarrayji(arr, 5);
+
+    // dyanamic array allocation
+    int n;
+    cin >> n;
+
+    int *arr = new int[n];
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        int data;
+        cin >> data;
+        arr[i] = data;
     }
+
+    // let me try to add /insert more data in array
+    for (int i = 0; i < 10; i++)
+    {
+        arr[n + i] = 80;
+    }
+    printdyamicarray(arr, n);
 
     return 0;
 }

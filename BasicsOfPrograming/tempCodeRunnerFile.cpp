@@ -1,1 +1,1 @@
-    // countZeroOne(arr, n);
+    // sumOfRows(arr, n, m);
