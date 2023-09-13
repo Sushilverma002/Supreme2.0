@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits.h>
+#include <vector>
 using namespace std;
 
 // function for PRINTING  TWO D ARRAY
@@ -122,18 +123,22 @@ int main()
     //     }
     //     cout << endl;
     // }
-    // twoDarray(arr, n, m);
+    int n = 3;
+    int m = 3;
+    twoDarray(arr, n, m);
     // columnWiseAcces(arr, m, n);
 
     // input of 2d matrix
     // int arr[2][3];
-    int n = 3;
-    int m = 3;
+
     // int target = 40;
     // cout << "the maximum no in array is:" << findmax(arr, n, m) << endl;
     // cout << "the findmin no in array is:" << findmin(arr, n, m) << endl;
     // sumOfRows(arr, n, m);
     transpose(arr, n, m);
+    cout << endl;
+    twoDarray(arr, n, m);
+
     // cout << "you got it :" << linearSearchinTwoDmatrix(arr, n, m, target) << endl;
 
     // for (int i = 0; i < n; i++)
@@ -142,6 +147,41 @@ int main()
     //     {
     //         cin >> arr[i][j];
     //     }
+    // }
+
+    // 2d array decalaration-with row and columns it has a default values like -1etc.
+    // vector<vector<int>> brr(5, vector<int>(10, -1));
+    // for (int i = 0; i < brr.size(); i++)
+    // {
+    //     for (int j = 0; j < brr[i].size(); j++)
+    //     {
+    //         cout << brr[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // vector is specified with empty data of rows and columns so
+    // vector<vector<int>> srr;
+
+    // 4 other vector are created with the rows and the default vaule of zero;
+    // vector<int> vec1(10, 0);
+    // vector<int> vec2(5, 0);
+    // vector<int> vec5(3, 0);
+    // vector<int> vec6(1, 0);
+
+    // srr.push_back(vec1);
+    // srr.push_back(vec2);
+    // srr.push_back(vec5);
+    // srr.push_back(vec6);
+
+    // now printing the values in 2D MATRIX
+    // for (int i = 0; i < srr.size(); i++)
+    // {
+    //     for (int j = 0; j < srr[i].size(); j++)
+    //     {
+    //         cin >> srr[i][j];
+    //     }
+    //     cout << endl;
     // }
     return 0;
 }

@@ -1,1 +1,2 @@
-    // sumOfRows(arr, n, m);
+int n = 3;
+    int m = 3;
