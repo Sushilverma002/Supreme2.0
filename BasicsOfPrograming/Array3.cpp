@@ -36,17 +36,36 @@ void sortOneTwo(int arr[], int n)
         }
     }
 }
+void reArranging(int crr[], int m)
+{
+    int i = 0;
+    int j = m - 1;
+    ;
+    for (int i = 0; i < m; i++)
+    {
+        if (crr[i] == crr[j])
+        {
+            cout << crr[i] << endl;
+        }
+        i++;
+        j--;
+    }
+}
 int main()
 {
-    int arr[] = {1, 0, 2, 1, 0, 2, 1, 0};
-    int n = 8;
+    // int arr[] = {1, 0, 2, 1, 0, 2, 1, 0};`
+    // int n = 8;
+
+    int crr[] = {-1, -1, 2, -5, 2, 4};
+    int m = 6;
     // pritigElementOfNgfirstThenPos(arr, n);
-    sortOneTwo(arr, n);
+    // sortOneTwo(arr, n);
+    reArranging(crr, m);
     // printing an array
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < m; i++)
     {
-        cout << arr[i] << " ";
+        cout << crr[i] << " ";
     }
     return 0;
 }
