@@ -292,6 +292,17 @@ int setBitCoumt(int n){
     return count;
 
 }
+int metho2bitcount(int n){
+    int count=0;
+    while (n>0){
+        int bit=n&1;
+        if(bit==1){
+            count++;
+            }        
+        n=n>>1;
+    }
+    return count;
+}
 int main()
 {
     // PrintSumOf(5, 5, 5);
@@ -363,7 +374,8 @@ int main()
     // EvenOddBitwise(n);
     // kmToMiles(n);
     // CountSetBit(n);
-    int count=setBitCoumt(n);
+    // int count=setBitCoumt(n);
+    int count=metho2bitcount(n);
     cout<<count;
     return 0;
 }
