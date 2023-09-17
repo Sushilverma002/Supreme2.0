@@ -183,7 +183,7 @@ int DecimaToBinayMethod2(int n)
 }
 
 // binary to decimal
-int binaryToDecimal(int n)
+    int binaryToDecimal(int n)
 {
     int ans = 0;
     int i = 0;
@@ -265,7 +265,7 @@ void kmToMiles(int n)
     cout << "miles will be: " << miles << "Miles";
 }
 
-// count set bit of a no
+// count total  bit of a no
 void CountSetBit(int n)
 {
     int count = 0;
@@ -276,6 +276,21 @@ void CountSetBit(int n)
         count++;
     }
     cout << count << endl;
+}
+//Q8)count all set of bits
+int setBitCoumt(int n){
+    int count=0;
+    while(n>0){
+        int bit=n%2;
+        if(bit==1){
+        count++;
+        }
+       n=n/2;
+    
+    }
+
+    return count;
+
 }
 int main()
 {
@@ -347,6 +362,8 @@ int main()
     // cout << endl;
     // EvenOddBitwise(n);
     // kmToMiles(n);
-    CountSetBit(n);
+    // CountSetBit(n);
+    int count=setBitCoumt(n);
+    cout<<count;
     return 0;
 }

@@ -51,6 +51,19 @@ void reArranging(int crr[], int m)
         j--;
     }
 }
+void negativeFirst(int arr[], int n)
+{
+    int index = 0;
+    int second = 0;
+    for (; index < n; index++)
+    {
+        if (arr[index] < 0)
+        {
+            swap(arr[index], arr[second]);
+            second++;
+        }
+    }
+}
 int main()
 {
     // int arr[] = {1, 0, 2, 1, 0, 2, 1, 0};`
@@ -60,7 +73,8 @@ int main()
     int m = 6;
     // pritigElementOfNgfirstThenPos(arr, n);
     // sortOneTwo(arr, n);
-    reArranging(crr, m);
+    // reArranging(crr, m);
+    negativeFirst(crr, m);
     // printing an array
 
     for (int i = 0; i < m; i++)
