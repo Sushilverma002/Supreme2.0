@@ -6,6 +6,7 @@ void printArray(int arr[], int n)
 {
     arr[0] = 100;
 }
+// creating pair and print all the triplate
 int getunique(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -109,6 +110,23 @@ void printdyamicarray(int arr[], int n)
     {
         cout << arr[i] << " ";
     }
+}
+
+// Q5)shift array element by 1
+void shiftArray(int arr[], int n)
+{
+    // step1
+    int temp = arr[n - 1];
+
+    // step2
+    // shift-> arr[i]=arr[i-1]
+    for (int i = n - 1; i >= 1; i--)
+    {
+        arr[i] = arr[i - 1];
+    }
+    // step3
+    arr[0] = temp;
+    // cout<<arr[];
 }
 int main()
 {

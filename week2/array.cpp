@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Linear Search 
 bool LinearSearch(int arr[], int key, int size)
 {
     for (int i = 0; i < size; i++)
@@ -14,6 +15,7 @@ bool LinearSearch(int arr[], int key, int size)
     }
     return false;
 }
+//count one two zero
 int CountOneZero(int arr[], int size)
 {
     int count0 = 0;
