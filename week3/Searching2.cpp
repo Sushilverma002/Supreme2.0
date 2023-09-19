@@ -68,7 +68,7 @@ int main()
     arr.push_back(8);
     arr.push_back(10);
     int pivotindex = FindPivotIndex(arr);
-    // cout << "the Pivot element is : " << pivotindex << endl;
+    cout << "the Pivot element is : " << pivotindex << endl;
     int ans = -1;
     int target = 4;
     int n = arr.size();
