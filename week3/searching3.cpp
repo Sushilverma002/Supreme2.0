@@ -67,8 +67,55 @@ int NearlySortedArray(int arr[], int n, int target)
     }
     return -1;
 }
+
+// find odd occurrence
+int oddOccurence(int arr[], int n)
+{
+    int start = 0;
+    int end = n - 1;
+    int mid = start + (end - start) / 2;
+
+    while (start <= end)
+    {
+        // single element case
+        if (start == end)
+        {
+            return start;
+        }
+        // odd case
+
+        // mid check for even ood
+        if (mid & 1 == 1) // odd
+        {
+            if (arr[mid] == arr[mid - 1])
+            {
+                start = mid + 1; // catch
+            }
+            else
+            {
+                end = mid - 1;
+            }
+        }
+        // even case
+        else
+        {
+            if (arr[mid] == arr[mid + 1])
+            {
+                start = mid + 2; // catch
+            }
+            else
+            {
+                end = mid; // catch
+            }
+        }
+        mid = start + (end - start) / 2;
+    }
+    return -1;
+}
 int main()
 {
+    // question 1;
+
     //     int divident = 35;
     //     int divisor = -5;
     //     int noToDivide = DivideTwonumber(abs(divident), abs(divisor));
@@ -79,11 +126,18 @@ int main()
     //     }
     //     cout << noToDivide;
 
-    int arr[] = {20, 10, 30, 50, 40, 70, 60};
-    int n = 7;
-    int target = 60;
-    int nearlysortedarray = NearlySortedArray(arr, n, target);
-    cout << nearlysortedarray << " ";
+    // question 2
 
+    // int arr[] = {20, 10, 30, 50, 40, 70, 60};
+    // int n = 7;
+    // int target = 60;
+    // int nearlysortedarray = NearlySortedArray(arr, n, target);
+    // cout << nearlysortedarray << " ";
+
+    // question 3
+    int arr[] = {1, 1, 2, 2, 6, 5, 5, 6, 6, 4, 4};
+    int n = 11;
+    int occurenceElement = oddOccurence(arr, n);
+    cout << "the odd elemet occurnece is : " << occurenceElement << " ";
     return 0;
 }
