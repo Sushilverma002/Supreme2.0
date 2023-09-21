@@ -94,6 +94,22 @@ void sumOfRows(int arr[][3], int n, int m)
         cout << sum << endl;
     }
 }
+void DiagonalsumOfRows(int arr[][3], int n, int m)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+
+        for (int j = 0; j < m; j++)
+        {
+            if ((i + j) == n - 1)
+            {
+                sum = sum + arr[i][j];
+            }
+        }
+    }
+    cout << sum;
+}
 
 // transpose of the martix
 void transpose(int arr[][3], int n, int m)
@@ -125,7 +141,7 @@ int main()
     // }
     int n = 3;
     int m = 3;
-    twoDarray(arr, n, m);
+    // twoDarray(arr, n, m);
     // columnWiseAcces(arr, m, n);
 
     // input of 2d matrix
@@ -135,19 +151,23 @@ int main()
     // cout << "the maximum no in array is:" << findmax(arr, n, m) << endl;
     // cout << "the findmin no in array is:" << findmin(arr, n, m) << endl;
     // sumOfRows(arr, n, m);
+
+    // DiagonalsumOfRows(arr, n, m);
+
     transpose(arr, n, m);
     cout << endl;
-    twoDarray(arr, n, m);
+    // twoDarray(arr, n, m);
 
     // cout << "you got it :" << linearSearchinTwoDmatrix(arr, n, m, target) << endl;
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < m; j++)
-    //     {
-    //         cin >> arr[i][j];
-    //     }
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     // 2d array decalaration-with row and columns it has a default values like -1etc.
     // vector<vector<int>> brr(5, vector<int>(10, -1));

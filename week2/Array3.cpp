@@ -64,22 +64,36 @@ void negativeFirst(int arr[], int n)
         }
     }
 }
+
+void NegativePostive(int arr[], int n)
+{
+    int j = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < 0)
+        {
+            swap(arr[i], arr[j]);
+            j++;
+        }
+    }
+}
 int main()
 {
-    // int arr[] = {1, 0, 2, 1, 0, 2, 1, 0};`
+    // int arr[] = {1, 0, 2, 1, 0, 2, 1, 0};
     // int n = 8;
 
-    int crr[] = {-1, -1, 2, -5, 2, 4};
-    int m = 6;
+    int arr[] = {-1, -1, 2, -5, 2, 4};
+    int n = 6;
     // pritigElementOfNgfirstThenPos(arr, n);
+    NegativePostive(arr, n);
     // sortOneTwo(arr, n);
     // reArranging(crr, m);
-    negativeFirst(crr, m);
+    // negativeFirst(crr, m);
     // printing an array
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < n; i++)
     {
-        cout << crr[i] << " ";
+        cout << arr[i] << " ";
     }
     return 0;
 }
