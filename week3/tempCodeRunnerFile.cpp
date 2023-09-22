@@ -1,1 +1,1 @@
-    cout << "the Pivot element is : " << pivotindex << endl;
+    cout << endl;
