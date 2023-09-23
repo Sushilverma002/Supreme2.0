@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Linear Search 
+// Linear Search
 bool LinearSearch(int arr[], int key, int size)
 {
     for (int i = 0; i < size; i++)
@@ -15,7 +15,7 @@ bool LinearSearch(int arr[], int key, int size)
     }
     return false;
 }
-//count one two zero
+// count one two zero
 int CountOneZero(int arr[], int size)
 {
     int count0 = 0;
@@ -199,9 +199,13 @@ int main()
     // cout << minimum << endl;
 
     // reverse an array
-    int arr[5] = {20, 30, 40, 50, 60};
-    int size = 5;
-    // ReverseAnArray(arr, 6);
-    extreamPrintOfAnArray(arr, 5);
+    // int arr[5] = {20, 30, 40, 50, 60};
+    // int size = 5;
+    // // ReverseAnArray(arr, 6);
+    // extreamPrintOfAnArray(arr, 5);
+
+    int arr[2];
+    0 [arr] = 0;
+    cout << 0 [arr];
     return 0;
 }
