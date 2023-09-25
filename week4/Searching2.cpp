@@ -68,11 +68,19 @@ int mySqrt(int x)
     while (s <= e)
     {
         // kya mid hi toh answer nahi
-        if (mid * mid == x)
-        {
-            return mid;
-        }
-        else if (mid * mid < x)
+        // if (mid * mid == x)
+        // {
+        //     return mid;
+        // }
+        // else if (mid * mid < x)
+        // {
+        //     // ans store
+        //     // right me jao
+        //     ans = mid;
+        //     s = mid + 1;
+        // }
+
+        if (mid * mid <= x)
         {
             // ans store
             // right me jao
@@ -89,35 +97,22 @@ int mySqrt(int x)
     return ans;
 }
 // find out square root of a number
-int mySqrtUpToDecimalPlaces(int x)
+double mySqrtUpToDecimalPlaces(int x)
 {
-    float s = 0;
-    float e = x;
-    float mid = s + (e - s) / 2;
-    float ans = -1;
-
-    while (s <= e)
+    double sqrt = mySqrt(x);
+    double step = 0.1;
+    int percision = 5;
+    for (int i = 0; i < percision; ++i)
     {
-        // kya mid hi toh answer nahi25.5
-        if (mid * mid == x)
+        double j = sqrt;
+        while (j * j <= x)
         {
-            return mid;
+            sqrt = j;
+            j += step;
         }
-        else if (mid * mid < x)
-        {
-            // ans store
-            // right me jao
-            ans = mid;
-            s = mid + 1;
-        }
-        else
-        {
-            // left me jana h
-            e = mid - 1;
-        }
-        mid = s + (e - s) / 2;
+        step = step / 10;
     }
-    return ans;
+    return sqrt;
 }
 int main()
 {
@@ -144,11 +139,12 @@ int main()
     // {
     //     ans = binarySearch(arr, pivotindex + 1, n - 1, target);
     // }
-    float x;
+    int x;
     cin >> x;
     // int squareRoot = mySqrt(x);
-    float squareRoot = mySqrtUpToDecimalPlaces(x);
+    double squareRoot = mySqrtUpToDecimalPlaces(x);
     cout << squareRoot << endl;
-
+    // printf("%0.10f", squareRoot);
+    cout << endl;
     return 0;
 }

@@ -110,6 +110,8 @@ int MissingNumber(int arr[], int n)
         }
         mid = start + (end - start) / 2;
     }
+    // single element
+
     if (ans + 1 == 0)
     {
         return ans;
