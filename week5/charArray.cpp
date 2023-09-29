@@ -69,6 +69,7 @@ void tospaces(char ch[], int size)
         index++;
     }
 }
+
 // Q5check palindrom
 bool checkPalindrom(char ch[], int size)
 {
