@@ -97,4 +97,101 @@ class Solution
         return ans;;
     }
 };
+
+
+
+``````````````````` Painter Partition Problem``````````````
+class Solution
+{
+  public:
+  bool isPossible(int a[], int n, int k,long long mid){
+      long long boardPaint=1;
+      long long timeSum=0;
+
+      for(int i=0;i<n;i++){
+          if(timeSum+a[i]<=mid){
+             timeSum+=a[i];
+          }else{
+            boardPaint++;
+            if(a[i]>mid || boardPaint>k){
+                return false;
+            }
+         timeSum=a[i];
+          }
+      }
+      return true;
+  }
+    long long minTime(int arr[], int n, int k)
+    {
+
+        long long s=0;
+        long long sum=0;
+        long long ans=-1;
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+        }
+        long long e=sum;
+        long long mid=s+(e-s)/2;
+        while(s<=e){
+            if(isPossible(arr,n,k,mid))
+            {
+                ans=mid;
+                e=mid-1;
+            }
+            else{
+                s=mid+1;
+            }
+            mid=s+(e-s)/2;
+        }
+        return ans;
+    }
+};
+
+
+````````````````````` Agressive Cows `````````````
+class Solution {
+public:
+    int isPossibleSolution(int n, int k,int mid,vector<int> &stalls){
+        int countCows=1;
+        int lastPos=stalls[0];
+        for(int i=0;i<n;i++){
+            if(stalls[i]-lastPos>=mid){
+            countCows++;
+            if(countCows==k)
+            {
+                return true;
+            }
+            lastPos=stalls[i];
+            }
+        }
+        return false;
+    }
+    int solve(int n, int k, vector<int> &stalls) {
+
+        // Write your code here
+        sort(stalls.begin(),stalls.end());
+        int s=0;
+        int ans=-1;
+        int maxi=-1;
+
+        for(int i=0;i<n;i++){
+            maxi=max(maxi,stalls[i]);
+        }
+        int e=maxi;
+        int mid=s+(e-s)/2;
+
+        while(s<=e){
+            if(isPossibleSolution(n,k,mid,stalls)){
+                ans=mid;
+                s=mid+1;
+            }
+            else{
+                e=mid-1;
+            }
+            //har barr bhul jate hai
+            mid=s+(e-s)/2;
+        }
+        return ans;
+    }
+};
 */
