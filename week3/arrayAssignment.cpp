@@ -58,11 +58,11 @@ void missingElementTwo(int arr[], int n)
         cout << arr[i] << " ";
     }
     // now find the missing numbers;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     if (arr[i] != i + 1)
-    //         cout << i + 1 << " ";
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] != i + 1)
+            cout << i + 1 << " ";
+    }
 }
 
 // print like a wake in 2D matrix column wise
@@ -89,7 +89,7 @@ void waveLikePrint(vector<vector<int>> v)
     }
 }
 // row wise
-void waveLikePrint(vector<vector<int>> v)
+void waveLikePrint2(vector<vector<int>> v)
 {
     int n = v.size();
     int m = v[0].size();
@@ -114,14 +114,15 @@ void waveLikePrint(vector<vector<int>> v)
 
 int main()
 {
-    // int arr[] = {3, 3, 3, 2, 1};
-    vector<vector<int>> v{{1, 2, 3},
-                          {2, 5, 4},
-                          {3, 5, 4}};
-    waveLikePrint(v);
+    int arr[] = {1, 3, 5, 3, 4};
+    // vector<vector<int>> v{{1, 2, 3},
+    //                       {2, 5, 4},
+    int n = 5;
+    //                       {3, 5, 4}};
+    // waveLikePrint(v);
     // DuplicateElement(arr, n);
     // missingElement(arr, n);
-    // missingElementTwo(arr, n);
+    missingElementTwo(arr, n);
     return 0;
 }
 
