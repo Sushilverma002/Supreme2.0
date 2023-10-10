@@ -1,1 +1,2 @@
-    cout << "the Pivot element is : " << pivotindex << endl;
+SelectionSort(arr, n);
+    InsertionSort(arr, n);

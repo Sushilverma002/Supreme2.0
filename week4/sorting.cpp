@@ -33,7 +33,7 @@ void SelectionSort(int arr[], int n)
 }
 void InsertionSort(int arr[], int n)
 {
-    // ignore i=0 lement
+    // ignore i=0 element
     for (int i = 1; i < n; i++)
     {
         int temp = arr[i];
@@ -57,9 +57,9 @@ int main()
     {
         cin >> arr[i];
     }
-    // bubbleSort(arr, n);
+    bubbleSort(arr, n);
     // SelectionSort(arr, n);
-    InsertionSort(arr, n);
+    // InsertionSort(arr, n);
     // printing the elements
     for (int i = 0; i < n; i++)
     {
