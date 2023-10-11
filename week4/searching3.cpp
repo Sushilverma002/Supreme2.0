@@ -116,15 +116,15 @@ int main()
 {
     // question 1;
 
-    //     int divident = 35;
-    //     int divisor = -5;
-    //     int noToDivide = DivideTwonumber(abs(divident), abs(divisor));
+    // int divident = 35;
+    // int divisor = -5;
+    // int noToDivide = DivideTwonumber(abs(divident), abs(divisor));
 
     //     if ((divisor < 0 && divident > 0) || (divisor > 0 && divident < 0))
     //     {
     //         noToDivide = 0 - noToDivide;
     //     }
-    //     cout << noToDivide;
+    // cout << noToDivide;
 
     // question 2
 
@@ -135,9 +135,9 @@ int main()
     // cout << nearlysortedarray << " ";
 
     // question 3
-    int arr[] = {1, 1, 2, 2, 6, 5, 5, 6, 6, 4, 4};
-    int n = 11;
-    int occurenceElement = oddOccurence(arr, n);
-    cout << "the odd elemet occurnece is : " << occurenceElement << " ";
+    // int arr[] = {1, 1, 2, 2, 6, 5, 5, 6, 6, 4, 4};
+    // int n = 11;
+    // int occurenceElement = oddOccurence(arr, n);
+    // cout << "the odd elemet occurnece is : " << occurenceElement << " ";
     return 0;
 }
