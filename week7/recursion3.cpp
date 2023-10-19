@@ -58,6 +58,7 @@ void SubsqeunceStr(string str, string output, int index)
     // include
     // output mein phele push kar dunga
 
+    //
     output.push_back(ch);
     SubsqeunceStr(str, output, index + 1);
     // exclude
