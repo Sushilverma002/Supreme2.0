@@ -102,12 +102,17 @@ void MergeSort(int arr[], int s, int e)
 }
 int main()
 {
-    int arr[] = {2, 12, 43, 0, 15, 9, 43};
     int n = 7;
+    int arr[n];
     int s = 0;
     int e = n - 1;
-
-    // print before sorting
+    cout << "Enter the elements:";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    // print before sorting.
+    cout << "Array before sorting:" << endl;
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
@@ -117,6 +122,8 @@ int main()
     MergeSort(arr, s, e);
 
     // after sorting
+    cout << "Array after sorting:" << endl;
+
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
