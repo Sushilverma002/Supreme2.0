@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 using namespace std;
 int firstOccurenece(int arr[], int n, int target)
@@ -104,5 +105,52 @@ int main()
 
     int nearlysortedarray = nearlySortedArray(arr, n, target);
     cout << "the nearly sorted array is:" << nearlysortedarray << " ";
+    return 0;
+}
+*/
+#include <iostream>
+using namespace std;
+
+// bubble sort
+void bubbleSort(int *arr, int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        // inner loop
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+// selection sort
+void selectionSort(int *arr, int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int minindex = i;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] < arr[minindex])
+            {
+                minindex = j;
+            }
+        }
+        swap(arr[i], arr[minindex]);
+    }
+}
+int main()
+{
+    int arr[] = {2, 0, 15, 2, 7, 1};
+    int n = 6;
+    // bubbleSort(arr, n);
+    selectionSort(arr, n);
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
