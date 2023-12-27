@@ -21,7 +21,7 @@ int main(){
     unordered_map<char,int>mapping;
     countCharacter(mapping,str);
 
-    //trversing in map using FOR EACH loop
+    //traversing in map using FOR EACH loop
     for(auto i:mapping){
         cout<<i.first<<"->"<<i.second<<endl;
     }
