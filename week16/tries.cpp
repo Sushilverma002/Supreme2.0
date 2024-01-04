@@ -83,6 +83,8 @@ int main(){
     insertNode(root,"care");
     insertNode(root,"cater");
     insertNode(root,"sushil");
+    insertNode(root,"sushil");
+
 
     cout<<"insertion done"<<endl;
 
